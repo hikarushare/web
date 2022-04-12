@@ -3,6 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const i18n = require('i18n');
+
+i18n.configure({
+  locales: ['en', 'zh'],
+  directory: path.join(__dirname, 'locales'),
+  defaultLocale: 'en',
+  retryInDefaultLocale: true,
+  cookie: 'lang'
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,6 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(i18n.init);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
