@@ -1,4 +1,4 @@
-module.exports = {
+let amisJSON = {
   type: 'page',
   title: 'Hikaru Share Project',
   body: [
@@ -82,9 +82,9 @@ module.exports = {
           body: [
             {
               type: 'tpl',
-              tpl: 'Template First-level Heading',
+              tpl: 'Announcements',
               inline: false,
-              wrapperComponent: 'h1',
+              wrapperComponent: 'h2',
               style: {
                 fontWeight: 'bold'
               }

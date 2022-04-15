@@ -1,4 +1,4 @@
-module.exports = {
+let amisJSON = {
   type: 'page',
   title: 'Hikaru Share Project',
   body: [
