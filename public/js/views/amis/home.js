@@ -16,35 +16,35 @@ let amisJSON = {
                   label: 'Home',
                   actionType: 'url',
                   blank: false,
-                  url: ''
+                  url: '/'
                 },
                 {
                   type: 'button',
                   label: 'Torrents',
                   actionType: 'url',
                   blank: false,
-                  url: ''
+                  url: '/torrents'
                 },
                 {
                   type: 'button',
                   label: 'User Settings',
                   actionType: 'url',
                   blank: false,
-                  url: ''
+                  url: '/usersettings'
                 },
                 {
                   type: 'button',
                   label: 'Help',
                   actionType: 'url',
                   blank: false,
-                  url: ''
+                  url: '/help'
                 },
                 {
                   type: 'button',
                   label: 'About',
                   actionType: 'url',
                   blank: false,
-                  url: ''
+                  url: '/about'
                 }
               ]
             }
