@@ -23,5 +23,13 @@
             "always"
         ],
         "no-unused-vars": "off"
-    }
+    },
+    "overrides": [
+        {
+            "files": "public/js/views/amis/*.js",
+            "rules": {
+                "no-undef": "off"
+            }
+        }
+    ]
 }
