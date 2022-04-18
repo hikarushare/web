@@ -14,6 +14,7 @@ i18n.configure({
 });
 
 var homeRouter = require('./routes/home');
+var torrentsRouter = require('./routes/torrents');
 var aboutRouter = require('./routes/about');
 
 var app = express();
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
 
 app.use('/', homeRouter);
+app.use('/',torrentsRouter);
 app.use('/', aboutRouter);
 
 // catch 404 and forward to error handler
