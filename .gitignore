@@ -106,8 +106,5 @@ dist
 # VS Code workspaces
 *.code-workspace
 
-# NPM package-lock
-package-lock.json
-
 # Husky
 .husky/
