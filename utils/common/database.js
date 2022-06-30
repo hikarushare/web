@@ -6,8 +6,6 @@
  * @brief An utility to process with databases.
  */
 
-// @ts-check
-
 /** */
 
 const mysql = require('mysql');

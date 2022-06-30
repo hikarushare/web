@@ -6,8 +6,6 @@
  * @brief An utility to process with project configurations.
  */
 
-// @ts-check
-
 /** */
 
 const yaml = require('yaml');
