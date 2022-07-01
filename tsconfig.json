@@ -1,17 +1,15 @@
 {
-    "compilerOptions": {
-        "target": "es2021",
-        "module": "commonjs",
-        "sourceMap": true,
-        "declaration": true,
-        "rootDir": ".",
-        "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "maxNodeModuleJsDepth": 2
-    },
-    "include": [
-        "**/*.d.ts"
-    ]
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "sourceMap": true,
+    "declaration": true,
+    "rootDir": ".",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "maxNodeModuleJsDepth": 2
+  },
+  "include": ["**/*.d.ts"]
 }
