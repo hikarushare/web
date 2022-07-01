@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "format": "eslint \"**/*.js\"; npx prettier-check \"**/*.{html,json,css}\"",
+    "format:fix": "eslint \"**/*.js\" --fix; npx prettier -w \"**/*.{html,json,css}\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
