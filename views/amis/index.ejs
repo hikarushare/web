@@ -9,9 +9,18 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link href="https://cdn.bootcdn.net/ajax/libs/amis/1.8.0/sdk.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/amis/1.8.0/helper.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/amis/1.8.0/iconfont.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/amis/1.10.2/sdk.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/amis/1.10.2/helper.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/amis/1.10.2/iconfont.min.css"
+      rel="stylesheet"
+    />
     <style>
       html,
       body,
@@ -24,15 +33,22 @@
       }
     </style>
   </head>
+
   <body>
     <div id="root" class="app-wrapper"></div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/amis/1.8.0/sdk.min.js"></script>
-    <%- include('common/header') %>  <%# AMIS header %>
-    <%- include(amisFilePath) %>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/amis/1.10.2/sdk.min.js"></script>
     <script type="text/javascript">
-      (function () {
-        let amis = amisRequire('amis/embed');
-        let amisScoped = amis.embed('#root', amisJSONHome);
+      var amisJSON = null;
+      (async function () {
+        await $.ajax('/getAmisJSON?path=' + window.location.pathname.slice(1), {
+          dataType: 'json',
+          success: (data) => {
+            amisJSON = data;
+          }
+        });
+        const amis = amisRequire('amis/embed');
+        const amisScoped = amis.embed('#root', amisJSON);
       })();
     </script>
   </body>
