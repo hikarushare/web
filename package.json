@@ -9,13 +9,16 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "crypto-js": "^4.1.1",
     "debug": "~2.6.9",
     "ejs": "^3.1.8",
     "express": "~4.16.1",
+    "express-promise-router": "^4.1.1",
     "http-errors": "~1.6.3",
     "i18n": "^0.14.2",
     "morgan": "~1.9.1",
-    "promise-mysql": "^5.1.0"
+    "mysql": "^2.18.1",
+    "promise-mysql": "^5.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
