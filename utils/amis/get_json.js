@@ -9,39 +9,39 @@ let amisJSONHeadBtn = {
           label: 'Home',
           actionType: 'url',
           blank: false,
-          url: '/',
+          url: '/'
         },
         {
           type: 'button',
           label: 'Torrents',
           actionType: 'url',
           blank: false,
-          url: '/torrents',
+          url: '/torrents'
         },
         {
           type: 'button',
           label: 'User Settings',
           actionType: 'url',
           blank: false,
-          url: '/usersettings',
+          url: '/usersettings'
         },
         {
           type: 'button',
           label: 'Help',
           actionType: 'url',
           blank: false,
-          url: '/help',
+          url: '/help'
         },
         {
           type: 'button',
           label: 'About',
           actionType: 'url',
           blank: false,
-          url: '/about',
-        },
-      ],
-    },
-  ],
+          url: '/about'
+        }
+      ]
+    }
+  ]
 };
 
 let amisJSONUsrInfoBoard = {
@@ -127,9 +127,7 @@ let amisJSONTorrents = JSON.parse(JSON.stringify(amisJSONTpl));
 amisJSONTorrents.body[0].body[2].body[0].tpl = 'Torrents';
 amisJSONTorrents.body[0].body[2].body[1] = {
   type: 'service',
-  data: {
-    torrents: []
-  },
+  api: '/api/getTorrents',
   body: [
     {
       type: 'table',
@@ -139,58 +137,73 @@ amisJSONTorrents.body[0].body[2].body[1] = {
           name: 'category',
           type: 'text',
           width: '5%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Title',
           name: 'title',
-          labelClassName: 'text-center'
+          labelClassName: 'text-center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Duration',
           name: 'duration',
           width: '5%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Size',
           name: 'size',
           width: '5%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Seeders',
           name: 'seeders',
           width: '5%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Leechers',
           name: 'leechers',
           width: '5%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Completes',
           name: 'completes',
           width: '5%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         },
         {
           type: 'text',
           label: 'Uploader',
           name: 'uploader',
           width: '8%',
-          align: 'center'
+          align: 'center',
+          placeholder: '-',
+          sortable: true
         }
-      ],
-      source: '${torrents}'
+      ]
     }
   ]
 };

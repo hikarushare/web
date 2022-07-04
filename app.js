@@ -15,6 +15,7 @@ i18n.configure({
 
 const retAmisJSONRouter = require('./routes/amis/ret_json');
 const pageRoutes = require('./routes/show_page');
+const getTorrentsRouter = require('./routes/api/getTorrents');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/', pageRoutes.home);
 app.use('/', pageRoutes.torrents);
 app.use('/', pageRoutes['/']);
 app.use('/', retAmisJSONRouter);
+app.use('/', getTorrentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
