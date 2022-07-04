@@ -1,0 +1,51 @@
+# Configurations of Hikaru Share Tracker
+
+secrets:
+  - secrets/secret.yml
+
+# How does a client connect to a tracker server?
+client:
+  databases:
+    # MySQL database for authorized users
+    auth_users:
+      # host (default: localhost)
+      # For safety, it's recommended to set the value to "localhost".
+      host:
+      # port (default: 3306)
+      port:
+      # database
+      db:
+      # table
+      tbl:
+    # MySQL database for active BT clients
+    active_clients:
+      host:
+      port:
+      db:
+      tbl:
+    # MySQL database for torrents
+    torrents:
+      host:
+      port:
+      db:
+      tbl:
+
+# How does a tracker server start a tracker service?
+# E.g. The settings below affect how a tracker server initializes databases.
+server:
+  databases:
+    auth_users:
+      host:
+      port:
+      db:
+      tbl:
+    active_clients:
+      host:
+      port:
+      db:
+      tbl:
+    torrents:
+      host:
+      port:
+      db:
+      tbl:
