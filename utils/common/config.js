@@ -1,8 +1,6 @@
 /**
  * @file config.js
  * @author LittleYe233
- * @email 30514318+LittleYe233@users.noreply.github.com
- * @date 2022-04-25
  * @brief An utility to process with project configurations.
  */
 

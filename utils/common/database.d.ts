@@ -1,8 +1,6 @@
 /**
  * @file database.d.ts
  * @author LittleYe233
- * @email 30514318+LittleYe233@users.noreply.github.com
- * @date 2022-04-25
  * @brief Declarations of database.js.
  */
 
@@ -11,7 +9,22 @@
 import * as pmysql from 'promise-mysql';
 import * as Bluebird from 'bluebird';
 import { BasicConnectionConfig, BasicMySQLConfig } from './config';
-import { validateParams } from '../announce/process';
+
+export type validateParams = {
+  passkey: string,
+  info_hash: string,
+  peer_id: string,
+  port: number,
+  uploaded: number,
+  downloaded: number,
+  left: number,
+  compact?: number,
+  no_peer_id?: number,
+  event?: 'started' | 'completed' | 'stopped' | 'paused' | '',
+  ip?: string,
+  numwant?: number,
+  trackerid?: unknown
+};
 
 type DatabaseConn = BasicConnectionConfig;
 
